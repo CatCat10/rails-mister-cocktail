@@ -8,6 +8,10 @@
 
 <ul>
   <% @cocktails.each do |c| %>
-  <li class="main-list"><%= c.name %> <%= link_to 'Details', cocktail_path(c) %></li>
+  <div class='card-category'>
+    <li class="main-list">
+      <p><%= cl_image_tag c.photo, height: 300, width: 400, crop: :fill %> </p>
+      <p><%= c.name %> <%= link_to 'Details', cocktail_path(c) %> </p> </li>
   <% end %>
+  </div>
 </ul>
